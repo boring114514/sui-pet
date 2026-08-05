@@ -4,7 +4,6 @@
 
 param([string]$RepoUrl)
 
-$ErrorActionPreference = 'Stop'
 $proj = 'C:\Users\boyun\Documents\Default Project\AndroidPet'
 
 if (-not $RepoUrl) {
@@ -13,9 +12,20 @@ if (-not $RepoUrl) {
 }
 
 Set-Location $proj
-git remote remove origin 2>$null
+
+# 如果已有 origin 先移除（不存在时忽略错误）
+git remote remove origin 2>&1 | Out-Null
 git remote add origin $RepoUrl
+
 git push -u origin main
+if ($LASTEXITCODE -ne 0) {
+    Write-Host ''
+    Write-Host '推送失败。常见原因：' -ForegroundColor Red
+    Write-Host '  1. 仓库地址填错'
+    Write-Host '  2. 未登录 GitHub（会弹出登录窗口，需授权）'
+    Write-Host '  3. 网络无法访问 github.com'
+    exit 1
+}
 
 Write-Host ''
 Write-Host '推送成功！GitHub 会自动开始云端打包。' -ForegroundColor Green
