@@ -1,4 +1,4 @@
-# 用法: 先到 GitHub 网页新建一个空仓库(不要勾选初始化)，然后运行：
+﻿# 用法: 先到 GitHub 网页新建一个空仓库(不要勾选初始化)，然后运行：
 #   powershell -ExecutionPolicy Bypass -File push_to_github.ps1 "你的仓库地址"
 # 例：push_to_github.ps1 https://github.com/你的用户名/MonkeyPet-Android.git
 

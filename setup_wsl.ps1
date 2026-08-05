@@ -1,4 +1,4 @@
-# 用管理员身份运行本脚本（右键 PowerShell -> 以管理员身份运行）
+﻿# 用管理员身份运行本脚本（右键 PowerShell -> 以管理员身份运行）
 # 作用：安装 WSL2 + Ubuntu 发行版（首次会要求重启）
 $ErrorActionPreference = 'Stop'
 
