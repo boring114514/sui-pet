@@ -1,7 +1,14 @@
 __pycache__/
 *.pyc
-bin/
-build/
-.buildozer/
-dist_apk/
-gen_android_assets.py
+
+# Android buildozer outputs
+android/bin/
+android/build/
+android/.buildozer/
+android/dist_apk/
+android/gen_android_assets.py
+
+# Desktop PyInstaller outputs
+desktop/build/
+desktop/dist/
+desktop/*.spec

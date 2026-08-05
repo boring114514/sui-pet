@@ -15,7 +15,7 @@ pip3 install --upgrade pip
 pip3 install buildozer cython --user
 
 echo "=== 3/4 拷贝项目到 WSL 内（避免 drvfs 兼容问题）==="
-SRC="/mnt/c/Users/boyun/Documents/Default Project/AndroidPet"
+SRC="/mnt/c/Users/boyun/Documents/Default Project/AndroidPet/android"
 DEST="$HOME/AndroidPet"
 rm -rf "$DEST"
 mkdir -p "$DEST"
