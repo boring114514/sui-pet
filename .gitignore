@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+bin/
+build/
+.buildozer/
+dist_apk/
+gen_android_assets.py
