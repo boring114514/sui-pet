@@ -6,7 +6,7 @@ android/bin/
 android/build/
 android/.buildozer/
 android/dist_apk/
-android/gen_android_assets.py
+gen_android_assets.py
 
 # Desktop PyInstaller outputs
 desktop/build/
